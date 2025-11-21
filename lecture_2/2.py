@@ -3,7 +3,7 @@ def generate_profile(age):
         return "Child"
     elif 13 <= age <= 19:
         return "Teenager"
-    elif age => 20:
+    elif age >= 20:
         return "Adult"
     else: 
         return "Warning"
