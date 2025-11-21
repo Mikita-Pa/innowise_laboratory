@@ -3,8 +3,10 @@ def generate_profile(age):
         return "Child"
     elif 13 <= age <= 19:
         return "Teenager"
-    else:
+    elif age => 20:
         return "Adult"
+    else: 
+        return "Warning"
 
 user_name = input("Enter your full name: ")
 birth_year_str = input("Enter your birth year: ")
