@@ -96,7 +96,6 @@ def main():
             else:
                 print("Not enough data for summary stats.")
 
-        # --- Option 4: Find top performer ---
         elif choice == 4:
             # Сначала фильтруем студентов, у которых есть оценки, чтобы избежать ошибок
             students_with_grades = [s for s in students if len(s['grades']) > 0]
