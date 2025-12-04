@@ -18,6 +18,7 @@ CREATE TABLE grades (
     FOREIGN KEY(student_id) REFERENCES students(id)
 );
 
+
 -- Вставка студентов
 INSERT INTO students (full_name, birth_year) VALUES 
 ('Alice Johnson', 2005),
