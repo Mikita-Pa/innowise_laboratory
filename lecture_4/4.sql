@@ -1,4 +1,3 @@
--- 1. Сброс (удаляем старые таблицы, если они есть)
 DROP TABLE IF EXISTS grades;
 DROP TABLE IF EXISTS students;
 
@@ -32,7 +31,6 @@ INSERT INTO students (full_name, birth_year) VALUES
 ('Isabella Martinez', 2006);
 
 -- Вставка оценок (student_id, subject, grade)
--- Обратите внимание: ID студентов соответствуют порядку их добавления выше (1-9)
 INSERT INTO grades (student_id, subject, grade) VALUES 
 (1, 'Math', 88), (1, 'English', 92), (1, 'Science', 85),
 (2, 'Math', 75), (2, 'History', 83), (2, 'English', 79),
@@ -46,7 +44,6 @@ INSERT INTO grades (student_id, subject, grade) VALUES
 
 SELECT * FROM grades 
 WHERE student_id = (SELECT id FROM students WHERE full_name = 'Alice Johnson');
--- Или проще, если знаете ID: WHERE student_id = 1;
 
 SELECT student_id, AVG(grade) as average_grade 
 FROM grades 
